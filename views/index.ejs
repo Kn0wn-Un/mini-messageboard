@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <section class="messages">
+            <% for(let i = 0 ; i < messages.length;  i++ ) { %>
+                <article class="message">
+                    <h3><%= messages[i].user %> : </h3>
+                    <div class="text"><%= messages[i].text %></div>
+                    <div class="date-time">
+                        <%= messages[i].added.getDate() %>/<%= messages[i].added.getMonth() %>/<%= messages[i].added.getFullYear() %>
+                        at
+                        <%= messages[i].added.getHours() %>:<%= messages[i].added.getMinutes() %>
+                    </div>
+                </article>
+            <% } %>
+            <br><br>
+            <a href="/new">Add new message</a>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <p>Enter your message:</p>
+        <form method="POST" action="/new">
+            <label>Enter name:</label><br>
+            <input name="name" type="text" required>
+            <br><br>
+            <label>Enter message:</label><br>
+            <input name="text" type="textbox" required>
+            <br><br>
+            <button>Post</button>
+        </form>
+    </body>
+</html>
